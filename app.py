@@ -519,7 +519,7 @@ def style_risk(val):
     }
     return color_map.get(val, "")
 
-styled = df_display.style.applymap(style_risk, subset=["Risk Level"])
+styled = df_display.style.map(style_risk, subset=["Risk Level"])
 st.dataframe(styled, use_container_width=True, hide_index=True, height=420)
 
 st.divider()
