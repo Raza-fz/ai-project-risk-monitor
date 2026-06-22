@@ -324,7 +324,10 @@ in Backend API Development (T004, currently {df[df['task_id']=='T004']['completi
 will compress the testing timeline and jeopardize your July 20 launch.
 
 **Anomaly Detected:**
-Authentication Module (T006) was due {(today_dt - df[df['task_id']=='T006']['due_date'].values[0]).astype('timedelta64[D]').astype(int) if len(df[df['task_id']=='T006']) > 0 else 'N/A'} days ago
+t006_overdue = max(0, (today_dt - t006_due).days)   # computed BEFORE f-string
+t006_overdue_str = f"{t006_overdue} day(s)"
+# then in f-string:
+Authentication Module (T006) was due {t006_overdue_str} ago
 and sits at 80% — a final 20% that commonly hides the hardest integration work. Security Audit
 (T015) and Payment Integration (T007) are directly blocked by this incomplete task.
 
