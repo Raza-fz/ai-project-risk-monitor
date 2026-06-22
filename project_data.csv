@@ -1,0 +1,21 @@
+task_id,task_name,assignee,status,start_date,due_date,dependencies,priority,last_update,completion_pct
+T001,Requirements Gathering,Alice Chen,Complete,2026-05-01,2026-05-10,,High,2026-05-10,100
+T002,System Architecture Design,Bob Martinez,Complete,2026-05-08,2026-05-20,T001,High,2026-05-20,100
+T003,Database Schema Design,Carol White,Complete,2026-05-15,2026-05-25,T002,High,2026-05-24,100
+T004,Backend API Development,David Kim,In Progress,2026-05-22,2026-06-15,T003,High,2026-06-18,65
+T005,Frontend UI Development,Emma Liu,In Progress,2026-05-22,2026-06-20,T002,High,2026-06-15,55
+T006,Authentication Module,Frank Patel,In Progress,2026-05-28,2026-06-10,T003,Critical,2026-06-10,80
+T007,Payment Integration,Grace Kim,Blocked,2026-06-01,2026-06-25,T004;T006,Critical,2026-06-12,20
+T008,Email Notification System,Henry Zhang,Not Started,2026-06-10,2026-06-28,T004,Medium,2026-06-10,0
+T009,Admin Dashboard,Iris Park,In Progress,2026-06-05,2026-06-30,T005;T004,High,2026-06-20,40
+T010,Search & Filter Feature,Jack Wilson,Not Started,2026-06-12,2026-07-05,T004;T005,Medium,2026-06-12,0
+T011,Unit Testing - Backend,Karen Lee,In Progress,2026-06-01,2026-06-22,T004,High,2026-06-21,70
+T012,Unit Testing - Frontend,Liam Brown,Not Started,2026-06-10,2026-06-25,T005,High,2026-06-10,0
+T013,Integration Testing,Mike Davis,Not Started,2026-06-20,2026-07-05,T011;T012,High,2026-06-20,0
+T014,Performance Optimization,Nancy Garcia,Not Started,2026-06-25,2026-07-10,T013,Medium,2026-06-25,0
+T015,Security Audit,Oscar Taylor,Not Started,2026-06-20,2026-07-08,T006;T007,Critical,2026-06-20,0
+T016,Documentation,Paula Johnson,In Progress,2026-05-15,2026-07-01,T001,Low,2026-06-19,30
+T017,User Acceptance Testing,Quinn Roberts,Not Started,2026-07-06,2026-07-15,T013;T015,High,2026-07-06,0
+T018,Production Deployment Setup,Ryan Chen,Not Started,2026-07-01,2026-07-12,T014;T015,Critical,2026-07-01,0
+T019,Monitoring & Alerting Config,Sara Wong,Not Started,2026-07-05,2026-07-15,T018,High,2026-07-05,0
+T020,Go-Live Launch,Tom Miller,Not Started,2026-07-16,2026-07-20,T017;T018;T019,Critical,2026-07-16,0
