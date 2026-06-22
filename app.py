@@ -435,19 +435,4 @@ with st.expander("🔌 How to Connect Real AI APIs"):
     st.code('import google.generativeai as genai\ngenai.configure(api_key="YOUR_KEY")\nmodel = genai.GenerativeModel("gemini-1.5-pro")\nprint(model.generate_content(your_prompt).text)', language="python")
 
 st.divider()
-
-# ── 100-Word Summary ─────────────────────────────────────────────────────────────
-st.markdown('<div class="section-header">📝 100-Word Summary</div>', unsafe_allow_html=True)
-summary = (
-    "This AI Project Risk Monitor prototype demonstrates how artificial intelligence can proactively "
-    "surface project risks before they escalate. The system ingests structured task data — including "
-    "statuses, dependencies, deadlines, and completion percentages — and applies intelligent rules to "
-    "classify each task as Blocked, At Risk, or On Track. It identifies critical dependency chains "
-    "where a single delayed task cascades across multiple workstreams. The dashboard pairs this analysis "
-    "with ready-to-use ChatGPT and Gemini prompt templates, showing exactly how teams could integrate "
-    "large language models for automated blocker resolution messages, stakeholder summaries, and velocity "
-    "predictions. Built on Google Sheets, Python, and Streamlit — entirely free, shareable, and deployable in minutes."
-)
-st.markdown(f'<div class="summary-card">{summary}<div style="margin-top:12px;font-size:.75rem;color:#7b9fd4;">Word count: {len(summary.split())}</div></div>', unsafe_allow_html=True)
-st.divider()
 st.markdown('<div style="text-align:center;color:#555;font-size:.8rem;padding:20px;">AI Project Risk Monitor | Streamlit + Python | No confidential data</div>', unsafe_allow_html=True)
